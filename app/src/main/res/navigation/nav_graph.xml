@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/popularMoviesFragment">
+    app:startDestination="@id/popularMovies">
 
     <fragment
-        android:id="@+id/popularMoviesFragment"
-        android:name="com.example.andorid_movie_app.view.PopularMoviesFragment"
+        android:id="@+id/popularMovies"
+        android:name="com.example.andorid_movie_app.view.popular_movies.PopularMoviesFragment"
         android:label="fragment_movies"
         tools:layout="@layout/fragment_movies" />
+    <fragment
+        android:id="@+id/searchMovies"
+        android:name="com.example.andorid_movie_app.view.SearchFilmFragment"
+        android:label="fragment_search_film"
+        tools:layout="@layout/fragment_search_film" />
 </navigation>

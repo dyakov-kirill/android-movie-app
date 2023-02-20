@@ -6,9 +6,11 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/movieLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="10dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +24,8 @@
             android:layout_gravity="top"
             android:layout_marginEnd="10dp"
             android:layout_weight="0"
+            android:maxWidth="60dp"
+            android:maxHeight="90dp"
             android:scaleType="fitStart"
             app:srcCompat="@android:drawable/ic_delete" />
 

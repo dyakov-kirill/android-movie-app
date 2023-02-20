@@ -1,6 +1,8 @@
 package com.example.andorid_movie_app.data
 
 import com.example.andorid_movie_app.model.MovieList
+import com.example.andorid_movie_app.API_KEY
+import okio.Utf8
 import retrofit2.Response
 
 class Repository {
@@ -13,6 +15,6 @@ class Repository {
     }
 
     suspend fun getNew() : Response<MovieList> {
-        return RetrofitInstance.api.getNew("2020-2023", "year", "ZQQ8GMN-TN54SGK-NB3MKEC-ZKB8V06")
+        return RetrofitInstance.api.getNew("2022", "year", API_KEY, 200, "8-10", "rating.kp")
     }
 }
