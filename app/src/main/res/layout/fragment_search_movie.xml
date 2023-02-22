@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.SearchFilmFragment">
+    tools:context=".view.search_movie.SearchMovieFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,28 +16,28 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/editTextMovieName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Название фильма" />
+                android:hint="Название"
+                android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/editTextMovieYear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Год" />
+                android:hint="Год"
+                android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/editTextMovieRating"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Рейтинг" />
+                android:hint="Рейтинг"
+                android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/button"
@@ -47,6 +47,7 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

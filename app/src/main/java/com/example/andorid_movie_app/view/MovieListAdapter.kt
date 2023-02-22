@@ -6,12 +6,18 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.andorid_movie_app.databinding.MovieItemBinding
 import com.example.andorid_movie_app.model.MovieModel
+import kotlinx.coroutines.coroutineScope
+import kotlin.coroutines.coroutineContext
 
-class MovieListAdapter(private val dataSet: List<MovieModel>) : RecyclerView.Adapter<MovieListAdapter.MovieHolder>() {
-    class MovieHolder(private val binding: MovieItemBinding) : RecyclerView.ViewHolder(binding.root) {
+class MovieListAdapter(private val dataSet: List<MovieModel>,
+                       private val callback: AdapterCallback) : RecyclerView.Adapter<MovieListAdapter.MovieHolder>() {
+    class MovieHolder(private val binding: MovieItemBinding,
+                      private val callback: AdapterCallback) : RecyclerView.ViewHolder(binding.root) {
         private var id: Int = 0
         fun bind(item: MovieModel) {
-            binding.movieLayout.setOnClickListener {}
+            binding.movieLayout.setOnClickListener {
+                callback.openMovie(id)
+            }
             id = item.id
             binding.textName.text = item.name
             binding.textDescription.text = item.description
@@ -21,7 +27,7 @@ class MovieListAdapter(private val dataSet: List<MovieModel>) : RecyclerView.Ada
     }
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MovieHolder {
         val view = MovieItemBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
-        return MovieHolder(view)
+        return MovieHolder(view, callback)
     }
 
     override fun onBindViewHolder(taskHolder: MovieHolder, position: Int) {
@@ -29,4 +35,8 @@ class MovieListAdapter(private val dataSet: List<MovieModel>) : RecyclerView.Ada
     }
 
     override fun getItemCount() = dataSet.size
+
+    interface AdapterCallback {
+        fun openMovie(id: Int)
+    }
 }

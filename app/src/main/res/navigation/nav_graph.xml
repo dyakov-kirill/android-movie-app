@@ -9,10 +9,23 @@
         android:id="@+id/popularMovies"
         android:name="com.example.andorid_movie_app.view.popular_movies.PopularMoviesFragment"
         android:label="fragment_movies"
-        tools:layout="@layout/fragment_movies" />
+        tools:layout="@layout/fragment_movies" >
+        <action
+            android:id="@+id/action_popularMovies_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchMovies"
-        android:name="com.example.andorid_movie_app.view.SearchFilmFragment"
+        android:name="com.example.andorid_movie_app.view.search_movie.SearchMovieFragment"
         android:label="fragment_search_film"
-        tools:layout="@layout/fragment_search_film" />
+        tools:layout="@layout/fragment_search_movie" >
+        <action
+            android:id="@+id/action_searchMovies_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.andorid_movie_app.view.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" />
 </navigation>
