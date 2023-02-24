@@ -2,4 +2,9 @@
     <string name="app_name">andorid-movie-app</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete_from_favorite">Удалить из избранного</string>
+    <string name="add_to_favorite">В избранное</string>
+    <string name="kp_rating">Рейтинг кинопоиска: %1$.2f</string>
+    <string name="imdb_rating">Рейтинг IMDB: %1$.2f</string>
+    <string name="no_internet_connection">Отсутствует соединение с интернетом</string>
 </resources>

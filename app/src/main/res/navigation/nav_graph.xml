@@ -25,7 +25,15 @@
     </fragment>
     <fragment
         android:id="@+id/movieFragment"
-        android:name="com.example.andorid_movie_app.view.MovieFragment"
+        android:name="com.example.andorid_movie_app.view.movie.MovieFragment"
         android:label="fragment_movie"
         tools:layout="@layout/fragment_movie" />
+    <fragment
+        android:id="@+id/favoriteMovies"
+        android:name="com.example.andorid_movie_app.view.favorite_movies.FavoriteMoviesFragment"
+        android:label="FavoriteMoviesFragment" >
+        <action
+            android:id="@+id/action_favoriteMoviesFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
 </navigation>

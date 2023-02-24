@@ -2,11 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/popularMovies"
-        android:icon="@android:drawable/stat_sys_upload"
+        android:icon="@drawable/baseline_thumb_up_24"
         android:title="Лучшее за 2022" />
 
     <item
         android:id="@+id/searchMovies"
-        android:icon="@android:drawable/ic_menu_search"
+        android:icon="@drawable/baseline_search_24"
         android:title="Поиск фильма" />
+
+    <item
+        android:id="@+id/favoriteMovies"
+        android:icon="@drawable/baseline_star_rate_24"
+        android:title="Избранные фильмы" />
 </menu>
